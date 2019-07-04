@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProjectTest.Classes
 {
-    public class ReversedString
+    public static class ReversedString
     {
-        public string ReverseString(string S)
+        public static string ReverseString(string S)
         {
             if (S == "")
             {
-                throw new InvalidOperationException("Bla bla bla. N-ai voie b0$$");
+                throw new InvalidOperationException();
                 
             }
 
@@ -40,7 +40,6 @@ namespace ProjectTest.Classes
                 sb.Append(caracter);
             }
             return sb.ToString();
-
         }
     }
 }
