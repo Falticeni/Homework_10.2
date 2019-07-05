@@ -10,6 +10,11 @@ namespace GoatLatin
     {
         public static string ToGoatLatin(string S)
         {
+            if (S == "")
+            {
+                throw new ArgumentNullException();
+            }
+
             string[] sentence = S.Split(' ');
 
             StringBuilder sb = new StringBuilder();
@@ -24,7 +29,7 @@ namespace GoatLatin
                     sb.Append(sentence[word]);  // cuvantul
                     sb.Append("ma");            // + 'ma'
                 }
-                else
+                else  // in caz contrar cuvantul incepe cu o consoana
                 {
                     sb.Append(sentence[word].Substring(1)); // intoarce un subsir existent incepand cu un anumit index
                     sb.Append(sentence[word][0]);           // introducem la sfarsitul cuvantului prima litera
@@ -40,7 +45,6 @@ namespace GoatLatin
                 }
             }
             return sb.ToString();
-
         }
     }
 }

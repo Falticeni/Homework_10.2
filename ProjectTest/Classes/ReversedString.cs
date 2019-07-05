@@ -12,8 +12,7 @@ namespace ProjectTest.Classes
         {
             if (S == "")
             {
-                throw new InvalidOperationException();
-                
+                throw new ArgumentNullException();
             }
 
             char[] stringS = S.ToCharArray(); // convert string S to CharArray

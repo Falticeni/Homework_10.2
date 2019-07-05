@@ -17,5 +17,11 @@ namespace GoatLatin
         {
             Assert.AreEqual(output, GoatLatin.ToGoatLatin(input));
         }
+
+        [TestCase("")]
+        public void CheckNullArgument(string input)
+        {
+            Assert.Throws<ArgumentNullException>(() => GoatLatin.ToGoatLatin(input));
+        }
     }
 }
